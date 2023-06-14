@@ -1,7 +1,45 @@
-html {
-  max-width: 720px;
+.card > p {color: blueviolet;}
+p:focus,
+p:active,
+p:hover
+{
+    color:green;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke: 1px  yellowgreen;
+    direction: rtl;
 }
-
-body {
-  background: #fff;
+#test {
+    color:unset;
+    -webkit-text-fill-color: unset;
+    -webkit-text-stroke: unset;
+    /* writing-mode: vertical-rl; */
+    text-align: center;
+    text-decoration: underline dotted red;
 }
+.card {color:
+    inital,
+     rgba(71, 6, 6, 0.924);
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke: 1px palevioletred;
+}
+pre { text-decoration: underline wavy blueviolet ;}
+ *{
+    font-family: 'Roboto', fantasy;
+}
+* {font-size: 10px;
+font-style: oblique;}
+p {font-size: large;
+font-weight: lighter;
+font-style: italic;}
+.test {display: none;}
+.block {display: block;
+margin: auto;
+min-width: min-content;
+background: pink;
+width: 600
+px;
+max-width: 200px;
+min-height: 100px;
+max-height:min-content ;
+padding: auto;
+box-sizing: content-box ;}

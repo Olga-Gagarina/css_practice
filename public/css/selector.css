@@ -1,0 +1,26 @@
+
+#test:target{color:brown;}
+#link:target{ background: rebeccapurple;}
+.link:link {color:red;}
+.link:hover {color: green;}
+/* .card:hover {background: brown;} */
+.link:active {color: yellow;}
+.card:active {background: bisque;}
+input:focus {background: green;}
+input {background: gray;}
+.card:focus-within {background-color:pink;}
+.card:lang(en) {background: peru;}
+.card:lang(gr)>span::after {content: '(gr)'; }
+button {background: yellowgreen;}
+button:enabled { background: palevioletred ;}
+button:disabled {background: aquamarine;}
+.inp:read-only {background: blueviolet;}
+input[type="checkbox"] :checked ~ span { background: red;}
+input:checked~span {background: blueviolet;}
+.valid:valid {background: yellow;}
+.valid:invalid {background: rgb(255, 0, 85);}
+.valid:invalid {background: rgb(0, 200, 255);}
+.number:focus {background: red;}
+.number:out-of-range {background: wheat;}
+.number:in-range {background:blueviolet}
+input:placeholder-shown ~span {background: pink;}
