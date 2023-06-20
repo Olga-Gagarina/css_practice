@@ -9,6 +9,7 @@
 }
 .header {
     padding: 24px;
+    border-bottom: 1px solid rgba(222, 226, 230, 1);
 }
 .logo { 
     font-size: 17px;
@@ -53,6 +54,7 @@ display: block;
 }
 .footer{
     padding: 24px 0;
+    border-top: 1px solid rgba(222, 226, 230, 1);;
     
 }
 .footer-copyright{
@@ -68,25 +70,28 @@ font-size: 20px;
 display: block;
 margin-bottom: 12px;
 }
-.hero.title{
+.hero_title {
     font-size: 56px;
     color: #212529;
     font-weight: 500;
     margin: 12px;
     text-align: center;
-    /* display: block; */
+    display: block;
+    line-height: 150%;
 }
-.hero.text{
+.hero_text{
     font-size: 20px;
     color:#212529 ;
  max-width: 585px;
     margin: 0 auto;
     text-align: center;
-    /* display: block; */
+  display: block;
+  line-height: 150%;
+  /* hyphens: manual;
+  overflow: auto;
+  resize: both; */
 }
-.plans{
 
-}
 .plans_card:not(:last-of-type){
     margin-right: 24px;
 
@@ -97,7 +102,7 @@ margin-bottom: 12px;
     font-size: 24px;
     color:#212529 ;
 }
-.card_block{
+.card_block {
     padding: 24px;
     text-align: center;
 }
@@ -105,6 +110,7 @@ margin-bottom: 12px;
 .card_price_duration{
     font-size: 29px;
     color: #6C757D;
+    vertical-align:baseline;
 }
 .card_price_amound{
     font-size: 40px;
@@ -132,3 +138,55 @@ margin-bottom: 12px;
     font-size: 19px;
     width: 100%;
 }
+.card {
+   border: 1px solid red; 
+   border-radius:  10px;
+   box-shadow: 10px 10px 10px 1px black;
+ 
+}
+.card:hover {
+    outline: 3px solid rgb(87, 45, 45);
+    outline-offset: 3px;
+    cursor:  all-scroll;
+}
+.btn {
+    border-radius: 25px;
+}
+.btn:hover {
+    box-shadow: 10px 10px 10px 1px black; 
+}
+.hero_title {
+    text-shadow: 10px 5px 30px gray;
+}
+/* .card-header {
+    text-shadow: 10px 5px 30px gray;
+} */
+.plans_card:not(:nth-child(2)) > .card {
+    background: bisque;
+}
+.plans_card:nth-child(2) > .card{
+    background: pink;
+    /* display: none; */
+    /* visibility: collapse; */
+}
+p {
+    /* background: gray;
+    width: 200px;
+    height: 100px; */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* text-overflow: ellipsis; */
+    /* white-space: pre; */
+} 
+/* .hero_text{
+    font-size: 20px;
+    color:#212529 ;
+ max-width: 585px;
+    margin: 0 auto;
+    text-align: center;
+  display: block;
+  line-height: 150%; */
+  /* hyphens: manual;
+  overflow: auto;
+  resize: both; */
+/* } */
