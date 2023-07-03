@@ -1,3 +1,28 @@
+@keyframes fly{
+    from{top:200px;
+        opacity: 1;
+    }
+   1%{
+    opacity: 0.5;
+   }
+    25%{
+        top:500px;
+        left: 500px;
+        background: #212529;
+        opacity: 0.2;
+    }
+    50%{
+      left: 0;  
+      background: #563D7C;
+      opacity: 0.6;
+    }
+    to {
+        top:0;
+        left: 0;
+        background: #5A5A5A;
+        opacity: 0;
+    }
+}
 :root {
     --space-m: 12px;
     --space-l: 24px;
@@ -19,6 +44,7 @@
  display: flex;
  flex-direction: column;
  gap: 80px;
+ 
 }
 /* ====================== */
 .header {
@@ -26,7 +52,16 @@
     border-bottom: 1px solid rgba(222, 226, 230, 1);
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    max-width: 960px;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background: white;
 }
+/* .hero_slider{
+    z-index: 2; */
+/* } */
 .logo { 
     font-size: 17px;
     background-color:rgba(86, 61, 124, 1);
@@ -64,11 +99,14 @@ line-height: 190%;
 /* font-size: 15px; */
 font-weight: 100px;
 height: 17px ;
+transition-property: color;
+transition-duration: 1s;
 
 }
 .nav_link:hover {
     text-decoration: underline;
     color: blue;
+
 }
 
 
@@ -111,6 +149,7 @@ width: 1000px;
 align-items: center;
 padding: 40px;
 border-bottom: 1px solid rgba(222, 226, 230, 1);
+user-select: none;
 }
 .hero_content{
     display: flex;
@@ -193,7 +232,7 @@ font-weight: 400;
     display: inline-block;
     border-radius: 4px;
 border: 1px solid #6C757D;
-background: #6C757D;
+background-color: #6C757D;
 padding: 12px 16px;
 /* justify-content: center; */
 width: 119px;
@@ -206,6 +245,14 @@ text-decoration:none ;
 
 
 line-height: 100%;
+/* transition:  opacity 4s; */
+transition-property: opacity, background-color, color ;
+transition-duration: 2s;
+}
+.card_button:hover{
+    color: #5A5A5A;
+    background-color: black;
+    opacity: 0.7;
 }
 .form{
     display: flex;
@@ -264,7 +311,84 @@ background: #FFF;
     text-decoration: none;
     width: 100%;
 width: 60px;
+transition-property: color;
+transition-duration: 1s;
 }
 .form_button:hover{
     opacity: 0.7;
+}
+/* .hero_photo {
+    position: relative;
+    left: 10px;
+} */
+.hero_slider_icon{
+    background: #563D7C;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:    8px;
+    color: #FFFFFF;
+position: absolute;
+top: calc(50% - 15px)
+}
+.hero_slider_icon:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.hero_slider{
+    position: relative;
+}
+.hero_slider_right{
+    right: 20px;
+}
+.hero_slider_left{
+    left:  20px;
+}
+.modal{
+   position: fixed;
+  top: 200px;
+   left:  200px;
+    height: 200px;
+   width: 600px;
+   background: black;
+   color: #FFF;
+   padding: 36px;
+   border-radius: 24px;
+   line-height: 150%;
+   z-index: 3;
+   /* transition-property: top;
+   transition-duration: 3s;
+   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ transition-delay: 3s; */
+} 
+.modal{
+ animation-name: fly;
+ animation-duration: 10s;
+ animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1) ;
+ animation-delay: 0s;
+ animation-iteration-count: infinite;
+ animation-direction: normal;
+ animation-fill-mode: forwards;
+}
+.modal_image{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-top: 12px;
+    margin-right: 12px;
+    object-fit: scale-down;
+    background-color: #777;
+    object-position: top right;
+}
+.modal_text{
+    clear: right;
+}
+.input{
+    caret-color: red;
+    border:1px solid gold;
+}
+:root{
+    scroll-behavior: smooth;
 }

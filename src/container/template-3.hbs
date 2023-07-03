@@ -1,7 +1,7 @@
 <header class="header ">
-    <div class="">
+    <a href="#test">
         {{>logo}}
-    </div>
+    </a>
     <nav class="header_link ">
         {{!-- {{>nav list=header isVertical=true}} --}}
         <div class=" header_nav_right ">
@@ -9,8 +9,9 @@
         </div>
     </nav>
 </header>
+
 {{#with hero}}
-<div class="hero">
+<div class=" hero">
     <div class="hero_content">
         <h1 class="hero_title">
             {{title}}
@@ -19,28 +20,46 @@
             {{text}}
         </p>
     </div>
-    <img src="{{photo}} " alt="Hero image" class="hero_photo">
+    <div class="hero_slider">
+        <div class="hero_slider_icon hero_slider_left">{{left}} </div>
+
+        <img src="{{photo}} " alt="Hero image" class="hero_photo">
+        <div class="hero_slider_icon hero_slider_right">{{right}} </div>
+    </div>
+
 </div>
 {{/with}}
+<input type="text" class="input">
+<div class="modal">
+    {{hero.text}}
+    {{!-- <img src="{{hero.photo}} " alt="Hero image" class="modal_image"> --}}
+
+
+    <div class="modal_text"> {{hero.text}} {{hero.text}}</div>
+</div>
+
+
 <main class="blog">
     {{#each blog}}
     {{>cardBlog data=this}}
     {{/each}}
 </main>
-{{#with form}}
-<div class="form">
-    <div class="form_content">
-        <h3 class="form_title"> {{title}} </h3>
-        <p class="form_info">{{info}} </p>
-    </div>
-    <div class="form_action">
-        <a href=" {{href}} " class="form_button"> {{button}} </a>
-    </div>
+<section>
+    {{#with form}}
+    <div class="form">
+        <div class="form_content">
+            <h3 class="form_title"> {{title}} </h3>
+            <p class="form_info">{{info}} </p>
+        </div>
+        <div class="form_action">
+            <a href="{{href}} " class="form_button"> {{button}} </a>
+        </div>
 
-</div>
-{{/with}}
+    </div>
+    {{/with}}
+</section>
 
-<footer class="footer ">
+<footer class="footer" id="test">
     <div class="">
         {{>logo}}
         <span class="footer-copyright">Copyright 2023-2024</span>
