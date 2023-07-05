@@ -1,0 +1,119 @@
+<header class="header ">
+    <a href="#test">
+        {{>logo}}
+    </a>
+    <nav class="header_link ">
+        {{!-- {{>nav list=header isVertical=true}} --}}
+        <div class=" header_nav_right ">
+            {{>nav list=header}}
+        </div>
+    </nav>
+</header>
+<main class="main">
+
+    <div class="info_box">
+        {{#with info}}
+        <div class="info">
+            <h1 class="info_title">
+                {{title}}
+            </h1>
+            <p class="info_text">{{description}}</p>
+            {{/with}}
+        </div>
+        {{!-- {{#each list}}
+        <div class="list">
+            <strong class="msg_name"> {{name}}</strong>
+            <span class="msg_day">{{day}}</span>
+            <p class="msg_text">{{message}}</p>
+
+        </div>
+        {{/each}} --}}
+        {{!-- <a href="https://getbootstrap.com/docs/4.0/examples/offcanvas/" class="messages_link">All messages</a>
+        --}}
+    </div>
+
+
+    <div class="form">
+        {{#with form}}
+        <form class="form_card">
+            <strong class="form_title">{{title}} </strong>
+
+            <div class="form_input_list">
+                {{#each inputs}}
+                <input type="{{type}} " placeholder="{{placeholder}} " class="form_input" name="{{name}}"
+                    id="form_input-{{id}}  ">
+                {{/each}}
+            </div>
+
+
+
+            {{#with checkbox}}
+            <div class="form_checkbox_box">
+                <input type="checkbox" class="form_checkbox" id="{{name}} ">
+
+                <label class="form_label" for="{{name}} "> {{label}} </label>
+            </div>
+            {{/with}}
+            <button type="submit" class="form_button"> {{button}} </button>
+            <p class="form_info"> {{info}} </p>
+        </form>
+        {{/with}}
+    </div>
+
+
+</main>
+<section class="updates_box">
+    {{#with updates}}
+    <div class="update_title_box">
+        <h1 class="updates_title"> {{title}} </h1>
+    </div>
+    {{#each list}}
+
+    <div class="list_box">
+        {{>logo_bage}}
+        <div class="listbox">
+            <span class="list_nick">{{nickname}}
+
+            </span>
+            <p class="list_descr"> {{description}} </p>
+        </div>
+    </div>
+    {{/each}}
+    {{#with show_all}}
+    <a href=" {{url}} " class="show_all"> {{text}} </a>
+    {{/with}}
+    {{/with}}
+</section>
+{{#with expirience}}
+<div class="expirience_box">
+    <div class="expirience_title_box">
+        <h1 class="expirience_title">{{title}} </h1>
+        <span class="badge_page">{{badge}} </span>
+    </div>
+
+
+
+    <div class="expirience">
+        {{#each list}}
+        <div class="expirience_card ">
+            <h2 class="expirience_title_1"> {{name}}</h2>
+            <p class="expirience_text">{{details}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+
+</div>
+
+<footer class="footer" id="test">
+    <div class="">
+        {{>logo}}
+        <span class="footer-copyright">© 2023</span>
+    </div>
+    {{#each footer}}
+    <div class="">
+        <span class="footer-title"> {{title}} </span>
+        {{>nav list=links isVertical=true}}
+    </div>
+    {{/each}}
+</footer>
