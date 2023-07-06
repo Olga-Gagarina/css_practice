@@ -1,0 +1,30 @@
+<header>
+    <div class="header_UP ">
+        {{#with header}}
+        <div class="logo_brand">
+            {{>logo_brand}}
+        </div>
+        <nav class=" header_nav_right">
+
+            <div class=" ">
+                {{>nav_B list=links}}
+            </div>
+        </nav>
+    </div>
+    <div class="header_bootom">
+        {{#with ad}}
+
+        <div class="ad-titlebox">
+            {{>logo_Ad}}
+            <div class="ad_title">
+                {{text}}: {{url}}
+            </div>
+        </div>
+
+
+
+        {{/with}}
+        <span class="user">userOnline: {{userOnline}} </span>
+    </div>
+    {{/with}}
+</header>

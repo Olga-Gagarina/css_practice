@@ -1,0 +1,22 @@
+<div class="articles_card_box">
+    {{#each articles}}
+    <div class="articles_card">
+        <div class="border_zzz">
+
+            <div class="card_image" style="background-image:url({{photo}})">
+                {{#if isNew}}
+                <span class="bage_New">
+                    NEW
+                </span>
+                {{/if}}
+            </div>
+        </div>
+
+        <h2 class="card_title">
+            {{name}}
+        </h2>
+        <p class="card_text"> {{description}} </p>
+        <button class="card_button"> <a href="#" class="card_R"> Read All </a> </button>
+    </div>
+    {{/each}}
+</div>
