@@ -1,5 +1,5 @@
 
-/* ======================= */
+
 .page {
     background: #111827;
     padding: 0 20px;
@@ -104,10 +104,7 @@ align-items: center;
 gap: 24px;
 text-decoration: none;
 }
-/* .nav_vertical_B {
-    gap: 12px ;
-    flex-direction: column;
-} */
+
 
 .nav_link_B {
     text-decoration: none;
@@ -150,7 +147,6 @@ width: 1150px;
     color: #FFF;
     text-align: center;
     font-size: 36px;
-    font-family: Roboto;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
@@ -194,7 +190,7 @@ width: auto;
     display: flex;
    flex-direction: row;
     color: #FFF;
-/* text-align: center; */
+
 font-size: 16px;
 font-weight: 700;
 line-height: 100%;
@@ -408,17 +404,7 @@ border: 1px solid rgba(32, 42, 59, 1);
     margin-top: 12px;
 
 }
-/* .footer-title {
- color: #212529 ;
-font-size: 20px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-self: stretch;
-margin-bottom: 16px;
-font-weight: 500;
-height: 22px;
-} */
+
 
 .footer_L{
     width:1150px;
@@ -441,7 +427,7 @@ width: 47px;
 height: 20px;
 top: 167px;
 left: 299px;
-/* position: absolute; */
+
 position: static;
 color: #FFF;
 font-size: 16px;
