@@ -121,7 +121,7 @@ height: 22px;
 
 
    
-    
+/*      
  
 .hero {
     display: flex;
@@ -158,10 +158,8 @@ line-height: 170%;
 font-weight: 464px;
 width: 100%;
 height:  auto 102px ;
-f
-
-}
-.hero_photo{
+} */
+ /* .hero_photo{
     width: 500px;
     height: 500px;
     flex-shrink: 0;
@@ -188,8 +186,8 @@ f
     height: 140px;
     border-radius: 140px;
 background: #777;
-}
-.card_title{
+} */
+ .card_title{
     color: #5A5A5A;
     text-align: center;
     leading-trim: both;
@@ -217,35 +215,55 @@ border: 1px solid #6C757D;
 background-color: #6C757D;
 padding: 12px 16px;
 /* justify-content: center; */
-width: 119px;
+ width: 119px;
 height: 35px;
 font-size: 16px;
 color: #FFF;
 text-align: center;
 /* align-items: center; */
 text-decoration:none ;
-
-
 line-height: 100%;
 /* transition:  opacity 4s; */
 transition-property: opacity, background-color, color ;
 transition-duration: 2s; 
-}
+} 
  .card_button:hover{
     color: #5A5A5A;
     background-color: black;
     opacity: 0.7;
-}   
+}     
 .main{
-    display: flex;
-    gap: 40px;
-    width: 1000px;
-    align-items: flex-start;
+    display: grid;
+  
+    gap: 80px;
+  place-items: flex-end center;
+    /* align-items: flex-start; */
+   /* height: auto; */
+   grid-auto-rows: 2fr;
+     grid-template-columns: repeat(3 , 1fr);  
+    grid-template-rows: repeat(3, min-content);
+    /* grid-template-areas:'messages messages form'  'advantages advantages advantages'; */
+   align-items: center;
+}
+.messages{
+    grid-column: 1/3 ;
+    grid-row: 1/3;
+}
+.advantages > div:first-of-type{
+  justify-self: flex-start;  
+  align-self: flex-start;
+}
+.form{
+    grid-column: 3/4 ;
+    grid-row: 1/3 ;
+}
+.advantages{
+ 
 }
 .messages{
 flex-grow: 20;
 display: flex;
-width: 620px;
+/* width: 620px; */
 padding: 24px;
 flex-direction: column;
 align-items: flex-end;
@@ -268,16 +286,16 @@ align-items: flex-start;
 gap: 10px;
 align-self: stretch;
 border-bottom: 1px solid #D3DEE9;
-width: 572px;
-width: 100%;
+/* width: 572px;
+width: 100%; */
 height: auto;
-height: 32px;
+/* height: 32px; */
 }
 .list{
     position: relative;
     padding-right: 36px;
     display: flex;
-width: 564px;
+/* width: 564px; */
 padding-bottom: 0px;
 flex-direction: column;
 align-items: flex-start;
@@ -340,16 +358,26 @@ height: 18px;
 }
 
 .advantages{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display: grid;
+   grid-template-columns: 200px 200px 200px;
+  grid-template-columns: repeat(3,1fr);
+   /* grid-template-columns: fit-content 20px 50px; */
+   /* grid-template-columns: min-content min-content 2fr; */
+   /* grid-template-rows: repeat(2, 1fr); */
+   /* grid-template-columns: repeat(auto-fiii, minmax(300px, 1fr)); */
+    align-items: center;
 gap: 24px;
-align-self: stretch;
-width: 1000px;
-height: 167px;
+height: 200px;
+/* align-self: stretch; */
+/* place-content: flex-end center; */
+justify-items: center;
+grid-auto-rows:300px ;
+
 }
 .advantages_card {
     display: flex;
+  
+    /* grid-template-columns: repeat(auto-fiii, minmax(50px, 1fr)); */
     padding: 22px;
     flex-direction: column;
     align-items: flex-start;
@@ -357,8 +385,13 @@ height: 167px;
     flex: 1 0 0; 
     border-radius: 12px;
 border: 1px solid #E4EAF2;
+/* width: 100%; */
+height: 500px;
+
 }
+advantages_card
 .advantages_title{
+   
     color: #212529;
 font-size: 18px;
 
@@ -366,18 +399,17 @@ font-style: normal;
 font-weight: 700;
 line-height: 100%;
 display: flex;
-width: 253.667px;
+
 flex-direction: column;
-width: 254px;
-height: 18px;
+
 }
 .advantages_text{
     display: flex;
 flex-direction: column;
 align-self: stretch;
-   width: 274px; 
-   width: 100%;
-   height: 96px;
+   /* width: 274px;  */
+   /* width: 100%; */
+   height: auto;
    color: var(--main-additional-font, #767676);
 font-size: 16px;
 font-style: normal;
@@ -403,6 +435,7 @@ line-height: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
+
         width: 148px;
         height: 17px;
 
@@ -520,3 +553,40 @@ cursor: pointer;
 .form_label{
     cursor: pointer;
 }
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-auto-rows: 3fr; */
+    grid-auto-flow: row dense;
+}
+.footer > div:first-of-type{
+    /* background: red; */
+    grid-column: 1/2;
+}
+.footer > div:nth-of-type(2) {
+    /* background: #007BFF; */
+    grid-column: 2/3;  
+}
+.footer > div:nth-of-type(3) {
+    grid-column: 3/4;
+    /* order: 2; */
+    /* background: yellowgreen; */
+}
+ /* .footer > div:nth-of-type(4) {
+    grid-column: 5/6; */
+    /* background: yellow; */
+/* }  */
+/* .footer >div:first-of-type{
+    grid-column: 1/3;
+    background: red;
+}
+.footer >div{
+    background: grey;
+}
+.footer >div:nth-last-of-type(2){
+    grid-column: 1/3;
+    background: yellowgreen;
+} */
+/* .footer >div:nth-of-type(2){
+  order:-2;
+}  */

@@ -1,0 +1,8 @@
+:root {
+    --space-m: 12px;
+    --space-l: 24px;
+--size-d: 16px;
+--size-s: 14px;
+--size-l: 20px;
+--color-border:var{--color-border, rgba(222, 226, 230, 1)};
+}
